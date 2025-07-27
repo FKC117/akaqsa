@@ -59,8 +59,7 @@ class SiteSettingsAdmin(admin.ModelAdmin):
         }),
         (_('Timestamps'), {
             'fields': ('created_at', 'updated_at'),
-            'classes': ('collapse',),
-            'readonly_fields': ('created_at', 'updated_at')
+            'classes': ('collapse',)
         }),
     )
     
@@ -69,16 +68,6 @@ class SiteSettingsAdmin(admin.ModelAdmin):
     list_display = ('site_name', 'site_tagline', 'is_active', 'maintenance_mode', 'updated_at')
     list_filter = ('is_active', 'maintenance_mode', 'show_prayer_times')
     search_fields = ('site_name', 'site_tagline', 'email', 'phone')
-    
-    def changelist_view(self, request, extra_context=None):
-        """Custom changelist view to handle singleton pattern"""
-        # If no SiteSettings exist, redirect to add view
-        if not SiteSettings.objects.exists():
-            return self.add_view(request)
-        
-        # If only one exists, redirect to change view
-        site_settings = SiteSettings.objects.first()
-        return self.response_change(request, site_settings)
 
 
 @admin.register(ContactMessage)
