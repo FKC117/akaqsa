@@ -1,166 +1,225 @@
 {% extends 'website/base.html' %}
+{% load static %}
 
-{% block title %}Contact Us - Al Aqsa School{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
 
 {% block content %}
-<section class="relative bg-gradient-to-br from-primary-50 to-surface-100 py-20">
+<!-- Contact Page Header -->
+<div class="bg-gradient-to-r from-primary to-primary-dark text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-            <h1 class="text-4xl lg:text-5xl font-crimson font-bold text-text-primary mb-6">
-                Contact Us
-            </h1>
-            <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-                Get in touch with us for any questions about our Islamic educational programs
+            <h1 class="text-4xl font-crimson font-bold mb-4">{% trans "Contact Us" %}</h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto">
+                {% trans "Get in touch with us. We'd love to hear from you and answer any questions you may have." %}
             </p>
         </div>
     </div>
-</section>
+</div>
 
-<section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12">
-            <!-- Contact Information -->
+<!-- Contact Information and Form -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div>
+            <h2 class="text-3xl font-crimson font-semibold text-primary mb-8">{% trans "Get In Touch" %}</h2>
+            
             <div class="space-y-8">
-                <h2 class="text-3xl font-crimson font-bold text-text-primary mb-6">
-                    Get in Touch
-                </h2>
-                
-                <div class="space-y-6">
-                    <!-- Address -->
-                    <div class="flex items-start">
-                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-text-primary mb-2">Address</h3>
-                            <p class="text-text-secondary">
-                                123 Islamic Street<br>
-                                Dhaka, Bangladesh<br>
-                                Postal Code: 1200
-                            </p>
-                        </div>
+                <!-- Address -->
+                <div class="flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                        <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
                     </div>
-
-                    <!-- Phone -->
-                    <div class="flex items-start">
-                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-success-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-text-primary mb-2">Phone</h3>
-                            <p class="text-text-secondary">
-                                +880 1234-567890<br>
-                                +880 1234-567891
-                            </p>
-                        </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">{% trans "Address" %}</h3>
+                        <p class="text-gray-600">{{ site_settings.address }}</p>
                     </div>
+                </div>
 
-                    <!-- Email -->
-                    <div class="flex items-start">
-                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-text-primary mb-2">Email</h3>
-                            <p class="text-text-secondary">
-                                info@alaqsaschool.edu.bd<br>
-                                admissions@alaqsaschool.edu.bd
-                            </p>
-                        </div>
+                <!-- Phone -->
+                <div class="flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                        <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
                     </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">{% trans "Phone" %}</h3>
+                        <p class="text-gray-600">{{ site_settings.phone }}</p>
+                        {% if site_settings.emergency_phone %}
+                        <p class="text-gray-600 mt-1">{% trans "Emergency" %}: {{ site_settings.emergency_phone }}</p>
+                        {% endif %}
+                    </div>
+                </div>
 
-                    <!-- Office Hours -->
-                    <div class="flex items-start">
-                        <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-text-primary mb-2">Office Hours</h3>
-                            <p class="text-text-secondary">
-                                Sunday - Thursday: 8:00 AM - 4:00 PM<br>
-                                Friday: 8:00 AM - 12:00 PM<br>
-                                Saturday: Closed
-                            </p>
-                        </div>
+                <!-- Email -->
+                <div class="flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                        <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">{% trans "Email" %}</h3>
+                        <p class="text-gray-600">{{ site_settings.email }}</p>
+                    </div>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                        <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">{% trans "Office Hours" %}</h3>
+                        <p class="text-gray-600">{{ site_settings.office_hours }}</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Contact Form -->
-            <div class="bg-surface-50 rounded-lg p-8">
-                <h2 class="text-2xl font-crimson font-bold text-text-primary mb-6">
-                    Send us a Message
-                </h2>
+            <!-- Social Media Links -->
+            {% if social_links %}
+            <div class="mt-12">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">{% trans "Follow Us" %}</h3>
+                <div class="flex space-x-4">
+                    {% if social_links.facebook %}
+                    <a href="{{ social_links.facebook }}" target="_blank" class="text-primary hover:text-primary-dark transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    {% endif %}
+                    {% if social_links.twitter %}
+                    <a href="{{ social_links.twitter }}" target="_blank" class="text-primary hover:text-primary-dark transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    {% endif %}
+                    {% if social_links.instagram %}
+                    <a href="{{ social_links.instagram }}" target="_blank" class="text-primary hover:text-primary-dark transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                        </svg>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-crimson font-semibold text-primary mb-6">{% trans "Send Us a Message" %}</h2>
+            
+            {% if messages %}
+            <div class="mb-6">
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <form method="post" class="space-y-6">
+                {% csrf_token %}
                 
-                <form class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-medium text-text-primary mb-2">First Name</label>
-                            <input type="text" class="w-full px-4 py-3 border border-border-light rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your first name">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="{{ contact_form.name.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">
+                            {{ contact_form.name.label }}
+                        </label>
+                        {{ contact_form.name }}
+                        {% if contact_form.name.errors %}
+                        <div class="text-red-600 text-sm mt-1">
+                            {{ contact_form.name.errors }}
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-text-primary mb-2">Last Name</label>
-                            <input type="text" class="w-full px-4 py-3 border border-border-light rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your last name">
+                        {% endif %}
+                    </div>
+
+                    <div>
+                        <label for="{{ contact_form.email.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">
+                            {{ contact_form.email.label }}
+                        </label>
+                        {{ contact_form.email }}
+                        {% if contact_form.email.errors %}
+                        <div class="text-red-600 text-sm mt-1">
+                            {{ contact_form.email.errors }}
                         </div>
+                        {% endif %}
                     </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-text-primary mb-2">Email</label>
-                        <input type="email" class="w-full px-4 py-3 border border-border-light rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="your.email@example.com">
+                </div>
+
+                <div>
+                    <label for="{{ contact_form.phone.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">
+                        {{ contact_form.phone.label }}
+                    </label>
+                    {{ contact_form.phone }}
+                    {% if contact_form.phone.errors %}
+                    <div class="text-red-600 text-sm mt-1">
+                        {{ contact_form.phone.errors }}
                     </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-text-primary mb-2">Phone</label>
-                        <input type="tel" class="w-full px-4 py-3 border border-border-light rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="+880 1XXXXXXXXX">
+                    {% endif %}
+                </div>
+
+                <div>
+                    <label for="{{ contact_form.subject.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">
+                        {{ contact_form.subject.label }}
+                    </label>
+                    {{ contact_form.subject }}
+                    {% if contact_form.subject.errors %}
+                    <div class="text-red-600 text-sm mt-1">
+                        {{ contact_form.subject.errors }}
                     </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-text-primary mb-2">Subject</label>
-                        <select class="w-full px-4 py-3 border border-border-light rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                            <option>General Inquiry</option>
-                            <option>Admissions</option>
-                            <option>Academic Programs</option>
-                            <option>Parent Portal</option>
-                            <option>Other</option>
-                        </select>
+                    {% endif %}
+                </div>
+
+                <div>
+                    <label for="{{ contact_form.message.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">
+                        {{ contact_form.message.label }}
+                    </label>
+                    {{ contact_form.message }}
+                    {% if contact_form.message.errors %}
+                    <div class="text-red-600 text-sm mt-1">
+                        {{ contact_form.message.errors }}
                     </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-text-primary mb-2">Message</label>
-                        <textarea rows="4" class="w-full px-4 py-3 border border-border-light rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your message..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="w-full btn-primary">
-                        <i class="fas fa-paper-plane mr-2"></i>
-                        Send Message
-                    </button>
-                </form>
+                    {% endif %}
+                </div>
+
+                <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                    {% trans "Send Message" %}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Map Section (Optional) -->
+<div class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-crimson font-semibold text-primary">{% trans "Find Us" %}</h2>
+            <p class="text-gray-600 mt-2">{% trans "Visit our campus and experience Islamic education excellence" %}</p>
+        </div>
+        
+        <!-- Placeholder for Google Maps -->
+        <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+                <div class="text-gray-500">
+                    <svg class="h-16 w-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                    </svg>
+                    <p class="text-lg font-semibold">{% trans "Interactive Map" %}</p>
+                    <p class="text-sm">{% trans "Google Maps integration will be added here" %}</p>
+                </div>
             </div>
         </div>
     </div>
-</section>
-
-<section class="py-16 bg-gradient-to-r from-primary to-primary-600 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-crimson font-bold mb-4">
-            Visit Our School
-        </h2>
-        <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Schedule a visit to see our facilities and meet our staff. We'd love to show you around!
-        </p>
-        <a href="{% url 'website:admissions' %}" class="bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
-            <i class="fas fa-calendar mr-2"></i>
-            Schedule a Visit
-        </a>
-    </div>
-</section>
+</div>
 {% endblock %} 

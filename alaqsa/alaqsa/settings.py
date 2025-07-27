@@ -67,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'website.views.site_settings_context',  # Add site settings context processor
             ],
         },
     },
@@ -192,3 +193,13 @@ LOGGING = {
         },
     },
 }
+
+# Email Configuration (for contact forms)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Change to your SMTP server
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'your-email@gmail.com'  # Change to your email
+EMAIL_HOST_PASSWORD = 'your-app-password'  # Change to your app password
+DEFAULT_FROM_EMAIL = 'Al Aqsa School <noreply@alaqsaschool.edu.bd>'
+CONTACT_EMAIL = 'info@alaqsaschool.edu.bd'  # Email for contact form notifications
