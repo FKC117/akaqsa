@@ -1,0 +1,247 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Mark Attendance{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Page Header -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Mark Attendance</h1>
+        <a href="{% url 'student:attendance_list' %}" class="btn btn-secondary btn-sm">
+            <i class="fas fa-arrow-left"></i> Back to Attendance List
+        </a>
+    </div>
+
+    <!-- Attendance Form -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Attendance Information</h6>
+                </div>
+                <div class="card-body">
+                    <form method="post" id="attendanceForm">
+                        {% csrf_token %}
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                {{ form.date|as_crispy_field }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.student|as_crispy_field }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.is_present|as_crispy_field }}
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                {{ form.reason|as_crispy_field }}
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Save Attendance
+                            </button>
+                            <a href="{% url 'student:attendance_list' %}" class="btn btn-secondary">
+                                <i class="fas fa-times"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Attendance Section -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Quick Attendance Marking</h6>
+                </div>
+                <div class="card-body">
+                    <form method="post" id="quickAttendanceForm">
+                        {% csrf_token %}
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="quick_date" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="quick_date" name="quick_date" value="{{ today|date:'Y-m-d' }}" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="quick_class" class="form-label">Class</label>
+                                <select class="form-control" id="quick_class" name="quick_class" required>
+                                    <option value="">Select Class</option>
+                                    {% for class in classes %}
+                                        <option value="{{ class.id }}">{{ class.name }}-{{ class.section }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">&nbsp;</label>
+                                <button type="button" class="btn btn-info btn-block" id="loadStudents">
+                                    <i class="fas fa-users"></i> Load Students
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div id="studentsList" style="display: none;">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Student ID</th>
+                                            <th>Name</th>
+                                            <th>Roll Number</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                            <th>Reason (if absent)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="studentsTableBody">
+                                        <!-- Students will be loaded here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="form-group mt-3">
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fas fa-save"></i> Save All Attendance
+                                </button>
+                                <button type="button" class="btn btn-warning" id="markAllPresent">
+                                    <i class="fas fa-check-double"></i> Mark All Present
+                                </button>
+                                <button type="button" class="btn btn-danger" id="markAllAbsent">
+                                    <i class="fas fa-times"></i> Mark All Absent
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    // Load students when class is selected
+    $('#loadStudents').click(function() {
+        var classId = $('#quick_class').val();
+        var date = $('#quick_date').val();
+        
+        if (!classId) {
+            alert('Please select a class first.');
+            return;
+        }
+        
+        if (!date) {
+            alert('Please select a date first.');
+            return;
+        }
+        
+        // Show loading
+        $('#studentsList').hide();
+        $('#loadStudents').html('<i class="fas fa-spinner fa-spin"></i> Loading...');
+        
+        // Load students via AJAX
+        $.ajax({
+            url: '{% url "student:get_students_by_class" %}',
+            data: {
+                'class_id': classId,
+                'date': date
+            },
+            success: function(data) {
+                var tbody = $('#studentsTableBody');
+                tbody.empty();
+                
+                if (data.students.length > 0) {
+                    data.students.forEach(function(student) {
+                        var row = `
+                            <tr>
+                                <td>${student.student_id}</td>
+                                <td>${student.first_name} ${student.last_name}</td>
+                                <td>${student.roll_number}</td>
+                                <td>
+                                    <input type="radio" name="attendance_${student.id}" value="present" checked class="form-check-input">
+                                </td>
+                                <td>
+                                    <input type="radio" name="attendance_${student.id}" value="absent" class="form-check-input">
+                                </td>
+                                <td>
+                                    <input type="text" name="reason_${student.id}" class="form-control form-control-sm" placeholder="Reason for absence">
+                                </td>
+                            </tr>
+                        `;
+                        tbody.append(row);
+                    });
+                    
+                    $('#studentsList').show();
+                } else {
+                    alert('No students found in this class.');
+                }
+            },
+            error: function() {
+                alert('Error loading students. Please try again.');
+            },
+            complete: function() {
+                $('#loadStudents').html('<i class="fas fa-users"></i> Load Students');
+            }
+        });
+    });
+    
+    // Mark all present
+    $('#markAllPresent').click(function() {
+        $('input[value="present"]').prop('checked', true);
+    });
+    
+    // Mark all absent
+    $('#markAllAbsent').click(function() {
+        $('input[value="absent"]').prop('checked', true);
+    });
+    
+    // Handle quick attendance form submission
+    $('#quickAttendanceForm').submit(function(e) {
+        e.preventDefault();
+        
+        var formData = new FormData(this);
+        formData.append('bulk_attendance', 'true');
+        
+        $.ajax({
+            url: '{% url "student:bulk_attendance" %}',
+            method: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                if (response.success) {
+                    alert('Attendance saved successfully!');
+                    location.reload();
+                } else {
+                    alert('Error saving attendance: ' + response.error);
+                }
+            },
+            error: function() {
+                alert('Error saving attendance. Please try again.');
+            }
+        });
+    });
+    
+    // Set today's date as default
+    var today = new Date().toISOString().split('T')[0];
+    $('#quick_date').val(today);
+    
+    // Auto-submit individual attendance form on successful save
+    $('#attendanceForm').submit(function() {
+        // Form will be submitted normally
+    });
+});
+</script>
+{% endblock %} 

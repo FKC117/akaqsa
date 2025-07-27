@@ -1,0 +1,390 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Student Details - {{ student.full_name }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Page Header -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Student Details</h1>
+        <div>
+            <a href="{% url 'student:student_update' student.pk %}" class="btn btn-primary btn-sm">
+                <i class="fas fa-edit"></i> Edit Student
+            </a>
+            <a href="{% url 'student:student_list' %}" class="btn btn-secondary btn-sm">
+                <i class="fas fa-arrow-left"></i> Back to List
+            </a>
+        </div>
+    </div>
+
+    <!-- Student Information Cards -->
+    <div class="row">
+        <!-- Student Photo and Basic Info -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Student Information</h6>
+                </div>
+                <div class="card-body text-center">
+                    {% if student.photo %}
+                        <img src="{{ student.photo.url }}" alt="{{ student.full_name }}" class="img-profile rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    {% else %}
+                        <div class="img-profile rounded-circle mb-3 bg-secondary d-flex align-items-center justify-content-center mx-auto" style="width: 150px; height: 150px;">
+                            <i class="fas fa-user fa-3x text-white"></i>
+                        </div>
+                    {% endif %}
+                    
+                    <h4 class="text-primary">{{ student.full_name }}</h4>
+                    <p class="text-muted">Student ID: {{ student.student_id }}</p>
+                    <p class="text-muted">Roll Number: {{ student.roll_number }}</p>
+                    <p class="text-muted">Class: {{ student.current_class }}</p>
+                    
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <small class="text-muted">Age</small>
+                            <p class="font-weight-bold">{{ student.age }} years</p>
+                        </div>
+                        <div class="col-6">
+                            <small class="text-muted">Gender</small>
+                            <p class="font-weight-bold">{{ student.get_gender_display }}</p>
+                        </div>
+                    </div>
+                    
+                    {% if student.blood_group %}
+                    <div class="row">
+                        <div class="col-6">
+                            <small class="text-muted">Blood Group</small>
+                            <p class="font-weight-bold">{{ student.blood_group }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Contact Information</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="font-weight-bold text-primary">Personal Contact</h6>
+                            {% if student.email %}
+                            <p><i class="fas fa-envelope text-gray-400 mr-2"></i>{{ student.email }}</p>
+                            {% endif %}
+                            {% if student.phone %}
+                            <p><i class="fas fa-phone text-gray-400 mr-2"></i>{{ student.phone }}</p>
+                            {% endif %}
+                            <p><i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>{{ student.address }}</p>
+                            <p><i class="fas fa-city text-gray-400 mr-2"></i>{{ student.city }}, {{ student.state }} {{ student.postal_code }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="font-weight-bold text-primary">Parent/Guardian</h6>
+                            <p><i class="fas fa-user text-gray-400 mr-2"></i>Father: {{ student.father_name }}</p>
+                            <p><i class="fas fa-user text-gray-400 mr-2"></i>Mother: {{ student.mother_name }}</p>
+                            <p><i class="fas fa-phone text-gray-400 mr-2"></i>{{ student.parent_phone }}</p>
+                            {% if student.parent_email %}
+                            <p><i class="fas fa-envelope text-gray-400 mr-2"></i>{{ student.parent_email }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <h6 class="font-weight-bold text-primary">Emergency Contact</h6>
+                    <p><i class="fas fa-user text-gray-400 mr-2"></i>{{ student.emergency_contact_name }} ({{ student.emergency_contact_relation }})</p>
+                    <p><i class="fas fa-phone text-gray-400 mr-2"></i>{{ student.emergency_contact_phone }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Academic Information -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Academic Information</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p><strong>Admission Date:</strong><br>{{ student.admission_date|date:"F d, Y" }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p><strong>Current Class:</strong><br>{{ student.current_class }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p><strong>Roll Number:</strong><br>{{ student.roll_number }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p><strong>Status:</strong><br>
+                                {% if student.is_active %}
+                                    <span class="badge badge-success">Active</span>
+                                {% else %}
+                                    <span class="badge badge-danger">Inactive</span>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medical Information -->
+    {% if student.medical_conditions or student.allergies %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Medical Information</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% if student.medical_conditions %}
+                        <div class="col-md-6">
+                            <h6 class="font-weight-bold text-warning">Medical Conditions</h6>
+                            <p>{{ student.medical_conditions }}</p>
+                        </div>
+                        {% endif %}
+                        {% if student.allergies %}
+                        <div class="col-md-6">
+                            <h6 class="font-weight-bold text-danger">Allergies</h6>
+                            <p>{{ student.allergies }}</p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Statistics Cards -->
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Attendance</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ attendance_count }} days</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Results</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ results.count }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-chart-line fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Fees</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ fees.count }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Documents</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ documents.count }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-file-alt fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs for Detailed Information -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <ul class="nav nav-tabs card-header-tabs" id="studentTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="results-tab" data-toggle="tab" href="#results" role="tab">Results</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="fees-tab" data-toggle="tab" href="#fees" role="tab">Fees</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="documents-tab" data-toggle="tab" href="#documents" role="tab">Documents</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content" id="studentTabsContent">
+                        <!-- Results Tab -->
+                        <div class="tab-pane fade show active" id="results" role="tabpanel">
+                            {% if results %}
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Exam</th>
+                                                <th>Subject</th>
+                                                <th>Marks Obtained</th>
+                                                <th>Total Marks</th>
+                                                <th>Percentage</th>
+                                                <th>Grade</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for result in results %}
+                                            <tr>
+                                                <td>{{ result.exam.name }}</td>
+                                                <td>{{ result.exam.subject.name }}</td>
+                                                <td>{{ result.marks_obtained }}</td>
+                                                <td>{{ result.exam.total_marks }}</td>
+                                                <td>{{ result.percentage }}%</td>
+                                                <td>{{ result.grade }}</td>
+                                                <td>
+                                                    {% if result.is_pass %}
+                                                        <span class="badge badge-success">Pass</span>
+                                                    {% else %}
+                                                        <span class="badge badge-danger">Fail</span>
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            {% else %}
+                                <p class="text-muted">No results available for this student.</p>
+                            {% endif %}
+                        </div>
+
+                        <!-- Fees Tab -->
+                        <div class="tab-pane fade" id="fees" role="tabpanel">
+                            {% if fees %}
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Fee Category</th>
+                                                <th>Amount</th>
+                                                <th>Due Date</th>
+                                                <th>Paid Amount</th>
+                                                <th>Status</th>
+                                                <th>Payment Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for fee in fees %}
+                                            <tr>
+                                                <td>{{ fee.fee_category.name }}</td>
+                                                <td>৳{{ fee.amount }}</td>
+                                                <td>{{ fee.due_date|date:"M d, Y" }}</td>
+                                                <td>৳{{ fee.paid_amount }}</td>
+                                                <td>
+                                                    {% if fee.payment_status == 'Paid' %}
+                                                        <span class="badge badge-success">Paid</span>
+                                                    {% elif fee.payment_status == 'Pending' %}
+                                                        <span class="badge badge-warning">Pending</span>
+                                                    {% elif fee.payment_status == 'Partial' %}
+                                                        <span class="badge badge-info">Partial</span>
+                                                    {% else %}
+                                                        <span class="badge badge-danger">Overdue</span>
+                                                    {% endif %}
+                                                </td>
+                                                <td>
+                                                    {% if fee.payment_date %}
+                                                        {{ fee.payment_date|date:"M d, Y" }}
+                                                    {% else %}
+                                                        -
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            {% else %}
+                                <p class="text-muted">No fee records available for this student.</p>
+                            {% endif %}
+                        </div>
+
+                        <!-- Documents Tab -->
+                        <div class="tab-pane fade" id="documents" role="tabpanel">
+                            {% if documents %}
+                                <div class="row">
+                                    {% for document in documents %}
+                                    <div class="col-md-6 col-lg-4 mb-3">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h6 class="card-title">{{ document.title }}</h6>
+                                                <p class="card-text text-muted">{{ document.document_type }}</p>
+                                                <p class="card-text small">{{ document.description|truncatewords:10 }}</p>
+                                                <a href="{{ document.file.url }}" class="btn btn-primary btn-sm" target="_blank">
+                                                    <i class="fas fa-download"></i> Download
+                                                </a>
+                                            </div>
+                                            <div class="card-footer text-muted">
+                                                <small>Uploaded: {{ document.uploaded_at|date:"M d, Y" }}</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <p class="text-muted">No documents uploaded for this student.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    // Initialize Bootstrap tabs
+    $('#studentTabs a').on('click', function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+});
+</script>
+{% endblock %} 

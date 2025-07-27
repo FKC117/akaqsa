@@ -1,0 +1,92 @@
+{% extends 'website/base.html' %}
+
+{% block title %}Admissions - Al Aqsa School{% endblock %}
+
+{% block content %}
+<section class="relative bg-gradient-to-br from-primary-50 to-surface-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl lg:text-5xl font-crimson font-bold text-text-primary mb-6">
+                Admissions
+            </h1>
+            <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                Join our Islamic educational community and give your child the best start in life
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-crimson font-bold text-text-primary mb-4">
+                Application Process
+            </h2>
+            <p class="text-lg text-text-secondary">
+                Simple steps to enroll your child in our Islamic educational program
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Step 1 -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white font-bold text-xl">1</span>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">Submit Application</h3>
+                <p class="text-text-secondary">
+                    Complete the online application form with required documents
+                </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white font-bold text-xl">2</span>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">Assessment</h3>
+                <p class="text-text-secondary">
+                    Student assessment and family interview to ensure best fit
+                </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white font-bold text-xl">3</span>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">Acceptance</h3>
+                <p class="text-text-secondary">
+                    Review and acceptance notification with enrollment details
+                </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white font-bold text-xl">4</span>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">Enrollment</h3>
+                <p class="text-text-secondary">
+                    Complete enrollment process and welcome to Al Aqsa School
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-gradient-to-r from-primary to-primary-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-crimson font-bold mb-4">
+            Ready to Apply?
+        </h2>
+        <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Start your child's journey in Islamic education today.
+        </p>
+        <a href="{% url 'website:contact' %}" class="bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="fas fa-phone mr-2"></i>
+            Contact Admissions
+        </a>
+    </div>
+</section>
+{% endblock %} 

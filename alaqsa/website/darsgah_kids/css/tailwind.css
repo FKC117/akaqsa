@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #2D5A27; /* Islamic green - tradition meets growth */
+  --color-primary-50: #F0F7EF;
+  --color-primary-100: #D9EDD6;
+  --color-primary-200: #B8DCB2;
+  --color-primary-300: #8FC485;
+  --color-primary-400: #6BAC5E;
+  --color-primary-500: #4A8F42;
+  --color-primary-600: #2D5A27;
+  --color-primary-700: #234521;
+  --color-primary-800: #1A331A;
+  --color-primary-900: #122214;
+
+  /* Secondary Colors */
+  --color-secondary: #D4AF37; /* Divine knowledge and scholarly excellence */
+  --color-secondary-50: #FEFCF3;
+  --color-secondary-100: #FDF6E0;
+  --color-secondary-200: #FAECC2;
+  --color-secondary-300: #F6DD95;
+  --color-secondary-400: #F0CA66;
+  --color-secondary-500: #E8B84A;
+  --color-secondary-600: #D4AF37;
+  --color-secondary-700: #B8942E;
+  --color-secondary-800: #947626;
+  --color-secondary-900: #785F20;
+
+  /* Accent Colors */
+  --color-accent: #8B4513; /* Warm earth tones for approachability */
+  --color-accent-50: #F7F2ED;
+  --color-accent-100: #EDE0D1;
+  --color-accent-200: #D9BFA3;
+  --color-accent-300: #C19A70;
+  --color-accent-400: #A67C4A;
+  --color-accent-500: #8B4513;
+  --color-accent-600: #7A3D11;
+  --color-accent-700: #66320E;
+  --color-accent-800: #52280B;
+  --color-accent-900: #3D1E08;
+
+  /* Background Colors */
+  --color-background: #FEFEFE; /* Pure canvas for content clarity */
+  --color-surface: #F7F5F3; /* Subtle warmth without distraction */
+  --color-surface-50: #FDFCFB;
+  --color-surface-100: #F7F5F3;
+  --color-surface-200: #F0EDEA;
+  --color-surface-300: #E8E4E0;
+  --color-surface-400: #DDD8D3;
+  --color-surface-500: #D1CBC5;
+
+  /* Text Colors */
+  --color-text-primary: #1A1A1A; /* Maximum readability for extended content */
+  --color-text-secondary: #4A5568; /* Clear hierarchy without harsh contrast */
+  --color-text-muted: #718096;
+  --color-text-light: #A0AEC0;
+
+  /* Status Colors */
+  --color-success: #22C55E; /* Positive progress and achievement celebration - green-500 */
+  --color-success-50: #F0FDF4;
+  --color-success-100: #DCFCE7;
+  --color-success-500: #22C55E;
+  --color-success-600: #16A34A;
+
+  --color-warning: #F59E0B; /* Gentle attention without alarm - amber-500 */
+  --color-warning-50: #FFFBEB;
+  --color-warning-100: #FEF3C7;
+  --color-warning-500: #F59E0B;
+  --color-warning-600: #D97706;
+
+  --color-error: #DC2626; /* Clear concern with helpful intent - red-600 */
+  --color-error-50: #FEF2F2;
+  --color-error-100: #FEE2E2;
+  --color-error-500: #EF4444;
+  --color-error-600: #DC2626;
+
+  /* Border Colors */
+  --color-border: #E2E8F0; /* slate-200 */
+  --color-border-light: #F1F5F9; /* slate-100 */
+  --color-border-muted: #CBD5E1; /* slate-300 */
+
+  /* Shadow Values */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Animation Durations */
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 400ms;
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-text-primary);
+  }
+
+  .font-arabic {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-inter font-semibold transition-all duration-300 hover:bg-primary-700 focus:ring-2 focus:ring-primary-200 focus:outline-none;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-primary px-6 py-3 rounded-lg font-inter font-semibold transition-all duration-300 hover:bg-secondary-600 hover:text-white focus:ring-2 focus:ring-secondary-200 focus:outline-none;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md border border-border-light p-6 transition-shadow duration-300 hover:shadow-lg;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary-200 focus:border-primary-500 focus:outline-none transition-colors duration-300;
+  }
+
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-700 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-secondary to-secondary-700 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .transition-gentle {
+    transition: all 300ms ease-out;
+  }
+
+  .transition-prayer {
+    transition: all 400ms ease-out;
+  }
+
+  .shadow-islamic {
+    box-shadow: var(--shadow-md);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

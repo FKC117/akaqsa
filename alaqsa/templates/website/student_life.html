@@ -1,0 +1,87 @@
+{% extends 'website/base.html' %}
+
+{% block title %}Student Life - Al Aqsa School{% endblock %}
+
+{% block content %}
+<section class="relative bg-gradient-to-br from-primary-50 to-surface-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl lg:text-5xl font-crimson font-bold text-text-primary mb-6">
+                Student Life
+            </h1>
+            <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                A vibrant community where Islamic values meet academic excellence
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-crimson font-bold text-text-primary mb-4">
+                Life at Al Aqsa School
+            </h2>
+            <p class="text-lg text-text-secondary">
+                Our students enjoy a rich, engaging environment that nurtures both their Islamic identity and academic growth.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Daily Prayer -->
+            <div class="bg-white rounded-lg shadow-gentle p-6 hover:shadow-elevated transition-shadow">
+                <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2L3 9l7 7 7-7-7-7zM10 4.83L15.17 10 10 15.17 4.83 10 10 4.83z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">Daily Prayer</h3>
+                <p class="text-text-secondary">
+                    Students participate in daily prayers, fostering a strong connection with their faith and community.
+                </p>
+            </div>
+
+            <!-- Islamic Studies -->
+            <div class="bg-white rounded-lg shadow-gentle p-6 hover:shadow-elevated transition-shadow">
+                <div class="w-16 h-16 bg-success-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-success-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">Islamic Studies</h3>
+                <p class="text-text-secondary">
+                    Comprehensive Islamic education including Quran memorization, Arabic language, and Islamic history.
+                </p>
+            </div>
+
+            <!-- Extracurricular Activities -->
+            <div class="bg-white rounded-lg shadow-gentle p-6 hover:shadow-elevated transition-shadow">
+                <div class="w-16 h-16 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">Extracurricular Activities</h3>
+                <p class="text-text-secondary">
+                    Sports, arts, Islamic competitions, and community service projects for well-rounded development.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-gradient-to-r from-primary to-primary-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-crimson font-bold mb-4">
+            Experience Student Life at Al Aqsa
+        </h2>
+        <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Join our vibrant community and give your child the opportunity to grow in faith and knowledge.
+        </p>
+        <a href="{% url 'website:admissions' %}" class="bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="fas fa-graduation-cap mr-2"></i>
+            Apply Now
+        </a>
+    </div>
+</section>
+{% endblock %} 

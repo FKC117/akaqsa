@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Bulk Attendance{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Page Header -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Bulk Attendance Marking</h1>
+        <a href="{% url 'student:attendance_list' %}" class="btn btn-secondary btn-sm">
+            <i class="fas fa-arrow-left"></i> Back to Attendance List
+        </a>
+    </div>
+
+    <!-- Bulk Attendance Form -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Select Class and Date</h6>
+                </div>
+                <div class="card-body">
+                    <form method="post" id="bulkAttendanceForm">
+                        {% csrf_token %}
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                {{ form.date|as_crispy_field }}
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.class_name|as_crispy_field }}
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-users"></i> Load Students
+                            </button>
+                            <a href="{% url 'student:attendance_list' %}" class="btn btn-secondary">
+                                <i class="fas fa-times"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Instructions</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>How to use Bulk Attendance:</h6>
+                            <ol>
+                                <li>Select the date for attendance marking</li>
+                                <li>Choose the class you want to mark attendance for</li>
+                                <li>Click "Load Students" to see all students in that class</li>
+                                <li>Mark each student as Present or Absent</li>
+                                <li>Add reasons for absences if needed</li>
+                                <li>Use "Mark All Present" or "Mark All Absent" for quick marking</li>
+                                <li>Click "Save All Attendance" to submit</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Quick Actions:</h6>
+                            <ul>
+                                <li><strong>Mark All Present:</strong> Sets all students to present</li>
+                                <li><strong>Mark All Absent:</strong> Sets all students to absent</li>
+                                <li><strong>Toggle All:</strong> Switches all students' status</li>
+                                <li><strong>Clear Reasons:</strong> Removes all absence reasons</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    // Set default date to today
+    if (!$('#id_date').val()) {
+        var today = new Date().toISOString().split('T')[0];
+        $('#id_date').val(today);
+    }
+    
+    // Form validation
+    $('#bulkAttendanceForm').submit(function(e) {
+        var date = $('#id_date').val();
+        var class_name = $('#id_class_name').val();
+        
+        if (!date) {
+            alert('Please select a date.');
+            e.preventDefault();
+            return false;
+        }
+        
+        if (!class_name) {
+            alert('Please select a class.');
+            e.preventDefault();
+            return false;
+        }
+        
+        // Check if date is not in the future
+        var selectedDate = new Date(date);
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        if (selectedDate > today) {
+            if (!confirm('You are marking attendance for a future date. Continue?')) {
+                e.preventDefault();
+                return false;
+            }
+        }
+    });
+    
+    // Auto-submit when both fields are filled (optional)
+    $('#id_date, #id_class_name').change(function() {
+        var date = $('#id_date').val();
+        var class_name = $('#id_class_name').val();
+        
+        if (date && class_name) {
+            // Optional: Auto-submit after a short delay
+            // setTimeout(function() {
+            //     $('#bulkAttendanceForm').submit();
+            // }, 1000);
+        }
+    });
+});
+</script>
+{% endblock %} 

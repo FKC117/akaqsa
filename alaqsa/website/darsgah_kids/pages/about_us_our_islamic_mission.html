@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Our Islamic Mission | Darsgah Kids</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdarsgahki7956back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background font-inter">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-islamic sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-12 w-12 text-primary" viewBox="0 0 48 48" fill="currentColor">
+                            <path d="M24 4L6 14v20c0 11.05 7.64 21.36 18 24 10.36-2.64 18-12.95 18-24V14L24 4zm0 6.83L36 16v18c0 8.27-5.69 15.54-12 17.84C17.69 49.54 12 42.27 12 34V16l12-5.17z"/>
+                            <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 24l3 3 6-6" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-2xl font-crimson font-semibold text-primary">Darsgah Kids</h1>
+                        <p class="text-sm text-text-secondary">Islamic Educational Excellence</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage_islamic_educational_institution.html" class="text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm">Home</a>
+                        <a href="about_us_our_islamic_mission.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">About Us</a>
+                        <a href="academic_programs_islamic_curriculum_showcase.html" class="text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm">Programs</a>
+                        <a href="student_life_islamic_community_experience.html" class="text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm">Student Life</a>
+                        <a href="admissions_enrollment_journey.html" class="text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm">Admissions</a>
+                        <a href="parent_portal_family_engagement_hub.html" class="btn-primary text-sm">Parent Portal</a>
+                    </div>
+                </div>
+
+                <!-- Prayer Time Widget -->
+                <div class="hidden lg:flex items-center bg-surface-100 rounded-lg px-4 py-2">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2L3 9l7 7 7-7-7-7zM10 4.83L15.17 10 10 15.17 4.83 10 10 4.83z"/>
+                    </svg>
+                    <div class="text-sm">
+                        <div class="font-semibold text-primary">Next: Asr</div>
+                        <div class="text-text-secondary">3:45 PM</div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary p-2" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-border-light">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage_islamic_educational_institution.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Home</a>
+                <a href="about_us_our_islamic_mission.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">About Us</a>
+                <a href="academic_programs_islamic_curriculum_showcase.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Programs</a>
+                <a href="student_life_islamic_community_experience.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Student Life</a>
+                <a href="admissions_enrollment_journey.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Admissions</a>
+                <a href="parent_portal_family_engagement_hub.html" class="btn-primary block text-center mx-3 mt-4">Parent Portal</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-surface-100 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="currentColor">
+                <defs>
+                    <pattern id="islamic-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <polygon points="10,1 4,7 10,13 16,7" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#islamic-pattern)"/>
+            </svg>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center">
+                <!-- Quranic Verse -->
+                <div class="bg-white/80 backdrop-blur-sm rounded-lg p-6 border border-primary-100 mb-8 max-w-4xl mx-auto">
+                    <p class="font-amiri text-2xl text-primary mb-3" dir="rtl">وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ</p>
+                    <p class="text-text-secondary italic">"And We have not sent you except as a mercy to the worlds" - Quran 21:107</p>
+                </div>
+
+                <h1 class="text-4xl lg:text-5xl font-crimson font-semibold text-text-primary leading-tight mb-6">
+                    Our <span class="text-gradient-primary">Islamic Mission</span> & <span class="text-gradient-secondary">Educational Vision</span>
+                </h1>
+                <p class="text-xl text-text-secondary leading-relaxed max-w-4xl mx-auto">
+                    Discover the foundation of authentic Islamic education that has guided Darsgah Kids for over 15 years, where every child's spiritual and academic journey is nurtured with wisdom, compassion, and excellence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <section class="bg-white border-b border-border-light sticky top-20 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex space-x-8 overflow-x-auto">
+                <button onclick="showSection('story')" id="story-tab" class="tab-button active py-4 px-2 border-b-2 border-primary text-primary font-semibold whitespace-nowrap">Our Story</button>
+                <button onclick="showSection('leadership')" id="leadership-tab" class="tab-button py-4 px-2 border-b-2 border-transparent text-text-secondary hover:text-primary whitespace-nowrap">Leadership & Scholars</button>
+                <button onclick="showSection('curriculum')" id="curriculum-tab" class="tab-button py-4 px-2 border-b-2 border-transparent text-text-secondary hover:text-primary whitespace-nowrap">Islamic Curriculum</button>
+                <button onclick="showSection('campus')" id="campus-tab" class="tab-button py-4 px-2 border-b-2 border-transparent text-text-secondary hover:text-primary whitespace-nowrap">Campus Tour</button>
+                <button onclick="showSection('values')" id="values-tab" class="tab-button py-4 px-2 border-b-2 border-transparent text-text-secondary hover:text-primary whitespace-nowrap">Values & Conduct</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story-section" class="section-content py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Story Content -->
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-6">The Beginning of Our Journey</h2>
+                        <p class="text-lg text-text-secondary leading-relaxed mb-6">
+                            In 2009, a group of dedicated Muslim educators and parents came together with a shared vision: to create an educational institution where Islamic values would not be an afterthought, but the very foundation upon which all learning is built.
+                        </p>
+                        <p class="text-lg text-text-secondary leading-relaxed mb-6">
+                            Founded by Dr. Amina Hassan, a scholar of Islamic education with over 20 years of experience, Darsgah Kids was born from the recognition that Muslim children needed more than weekend Islamic school. They needed a comprehensive educational environment where their Islamic identity could flourish alongside academic excellence.
+                        </p>
+                    </div>
+
+                    <!-- Mission Statement -->
+                    <div class="bg-primary-50 rounded-lg p-6 border-l-4 border-primary">
+                        <h3 class="font-crimson text-xl font-semibold text-primary mb-3">Our Mission</h3>
+                        <p class="text-text-secondary leading-relaxed italic">
+                            "To nurture confident, knowledgeable, and spiritually-grounded Muslim children who embody Islamic values while excelling academically, preparing them to be positive contributors to both their communities and the world at large."
+                        </p>
+                    </div>
+
+                    <!-- Core Principles -->
+                    <div class="space-y-4">
+                        <h3 class="font-crimson text-xl font-semibold text-text-primary">Our Core Principles</h3>
+                        <div class="grid gap-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-primary-100 rounded-full p-2 flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary">Authentic Islamic Education</h4>
+                                    <p class="text-text-secondary">Rooted in Quran and Sunnah, taught by qualified Islamic scholars</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-secondary-100 rounded-full p-2 flex-shrink-0">
+                                    <svg class="w-5 h-5 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary">Academic Excellence</h4>
+                                    <p class="text-text-secondary">Rigorous curriculum meeting and exceeding state standards</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-accent-100 rounded-full p-2 flex-shrink-0">
+                                    <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary">Character Development</h4>
+                                    <p class="text-text-secondary">Building moral character through Islamic teachings and community service</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story Image -->
+                <div class="relative">
+                    <div class="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-elevated">
+                        <img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Founding vision of Darsgah Kids Islamic education" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    
+                    <!-- Achievement Timeline -->
+                    <div class="absolute -bottom-8 -right-8 bg-white rounded-lg p-6 shadow-lg border border-border-light max-w-xs">
+                        <h4 class="font-crimson text-lg font-semibold text-primary mb-3">Our Journey</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Founded</span>
+                                <span class="font-semibold text-text-primary">2009</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Students Graduated</span>
+                                <span class="font-semibold text-text-primary">1,200+</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Awards Received</span>
+                                <span class="font-semibold text-text-primary">15+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership & Scholars Section -->
+    <section id="leadership-section" class="section-content py-16 bg-surface-50 hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-4">Our Leadership & Islamic Scholars</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Meet our dedicated team of qualified Islamic educators and administrators who guide our students' spiritual and academic journey</p>
+            </div>
+
+            <!-- Leadership Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Principal -->
+                <div class="card text-center group hover:shadow-elevated transition-all duration-300">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Dr. Amina Hassan - Principal" class="w-32 h-32 rounded-full object-cover mx-auto border-4 border-primary-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute -bottom-2 -right-2 bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-2">Dr. Amina Hassan</h3>
+                    <p class="text-primary font-semibold mb-3">Principal & Founder</p>
+                    <div class="text-sm text-text-secondary space-y-2 mb-4">
+                        <p>Ph.D. Islamic Education - Al-Azhar University</p>
+                        <p>M.A. Quranic Studies - Islamic University of Medina</p>
+                        <p>20+ Years Educational Leadership</p>
+                    </div>
+                    <p class="text-text-secondary text-sm leading-relaxed mb-4">
+                        "My vision is to create an environment where every child discovers their unique potential while staying rooted in Islamic values."
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-primary-100 text-primary px-2 py-1 rounded text-xs">Curriculum Design</span>
+                        <span class="bg-secondary-100 text-secondary-700 px-2 py-1 rounded text-xs">Leadership</span>
+                    </div>
+                </div>
+
+                <!-- Islamic Studies Director -->
+                <div class="card text-center group hover:shadow-elevated transition-all duration-300">
+                    <div class="relative mb-6">
+                        <img src="https://images.pixabay.com/photos/2016/11/21/12/42/beard-1845166_1280.jpg" alt="Sheikh Omar Al-Rashid - Islamic Studies Director" class="w-32 h-32 rounded-full object-cover mx-auto border-4 border-primary-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute -bottom-2 -right-2 bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-2">Sheikh Omar Al-Rashid</h3>
+                    <p class="text-primary font-semibold mb-3">Islamic Studies Director</p>
+                    <div class="text-sm text-text-secondary space-y-2 mb-4">
+                        <p>Ijazah in Quran - Dar Al-Hadith, Damascus</p>
+                        <p>M.A. Islamic Jurisprudence - Umm Al-Qura</p>
+                        <p>15+ Years Teaching Experience</p>
+                    </div>
+                    <p class="text-text-secondary text-sm leading-relaxed mb-4">
+                        "Teaching Islamic studies is not just about knowledge transfer, but about nurturing the heart and soul of each student."
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-primary-100 text-primary px-2 py-1 rounded text-xs">Quran & Hadith</span>
+                        <span class="bg-secondary-100 text-secondary-700 px-2 py-1 rounded text-xs">Fiqh</span>
+                    </div>
+                </div>
+
+                <!-- Arabic Language Coordinator -->
+                <div class="card text-center group hover:shadow-elevated transition-all duration-300">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Ustadh Yusuf Ibrahim - Arabic Language Coordinator" class="w-32 h-32 rounded-full object-cover mx-auto border-4 border-primary-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute -bottom-2 -right-2 bg-accent rounded-full w-8 h-8 flex items-center justify-center text-white">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-2">Ustadh Yusuf Ibrahim</h3>
+                    <p class="text-primary font-semibold mb-3">Arabic Language Coordinator</p>
+                    <div class="text-sm text-text-secondary space-y-2 mb-4">
+                        <p>B.A. Arabic Literature - Cairo University</p>
+                        <p>Certificate in Arabic Pedagogy - AUC</p>
+                        <p>12+ Years Language Instruction</p>
+                    </div>
+                    <p class="text-text-secondary text-sm leading-relaxed mb-4">
+                        "Arabic is the key that unlocks the treasures of Islamic knowledge. I help students fall in love with this beautiful language."
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-primary-100 text-primary px-2 py-1 rounded text-xs">Arabic Grammar</span>
+                        <span class="bg-secondary-100 text-secondary-700 px-2 py-1 rounded text-xs">Literature</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Leadership -->
+            <div class="bg-white rounded-lg p-8 shadow-gentle">
+                <h3 class="font-crimson text-2xl font-semibold text-text-primary mb-6 text-center">Academic Leadership Team</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.pixabay.com/photos/2016/03/23/04/01/woman-1274056_1280.jpg" alt="Ms. Sarah Ahmed - Academic Director" class="w-16 h-16 rounded-full object-cover border-2 border-primary-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Ms. Sarah Ahmed</h4>
+                            <p class="text-primary text-sm font-semibold">Academic Director</p>
+                            <p class="text-text-secondary text-sm">M.Ed. Curriculum & Instruction, 18 years experience</p>
+                            <p class="text-text-muted text-sm mt-2">Specializes in integrating Islamic values with core academic subjects</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Mr. Ahmed Malik - Student Affairs Coordinator" class="w-16 h-16 rounded-full object-cover border-2 border-primary-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Mr. Ahmed Malik</h4>
+                            <p class="text-primary text-sm font-semibold">Student Affairs Coordinator</p>
+                            <p class="text-text-secondary text-sm">M.A. Educational Psychology, 14 years experience</p>
+                            <p class="text-text-muted text-sm mt-2">Focuses on character development and student well-being</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Islamic Curriculum Framework Section -->
+    <section id="curriculum-section" class="section-content py-16 bg-white hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-4">Islamic Curriculum Framework</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Discover how Quranic teachings, prophetic traditions, and Islamic values are seamlessly integrated throughout all subjects</p>
+            </div>
+
+            <!-- Curriculum Integration -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h3 class="font-crimson text-2xl font-semibold text-text-primary mb-6">Holistic Integration Approach</h3>
+                    <p class="text-lg text-text-secondary leading-relaxed mb-6">
+                        Our curriculum doesn't treat Islamic education as a separate subject, but as the foundation that enriches every aspect of learning. From mathematics lessons that explore Islamic geometric patterns to science classes that marvel at Allah's creation, every subject becomes an opportunity for spiritual growth.
+                    </p>
+                    
+                    <!-- Core Islamic Subjects -->
+                    <div class="space-y-4">
+                        <h4 class="font-crimson text-xl font-semibold text-text-primary">Core Islamic Studies</h4>
+                        <div class="grid gap-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-primary-100 rounded-full p-2 flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-text-primary">Quran & Tajweed</h5>
+                                    <p class="text-text-secondary text-sm">Daily recitation, memorization, and understanding of Quranic verses with proper pronunciation</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-secondary-100 rounded-full p-2 flex-shrink-0">
+                                    <svg class="w-5 h-5 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-text-primary">Hadith & Sunnah</h5>
+                                    <p class="text-text-secondary text-sm">Study of prophetic traditions and their application in daily life</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-accent-100 rounded-full p-2 flex-shrink-0">
+                                    <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-text-primary">Islamic Jurisprudence (Fiqh)</h5>
+                                    <p class="text-text-secondary text-sm">Age-appropriate understanding of Islamic law and practical worship</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-elevated">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Islamic curriculum integration in classroom" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subject Integration Examples -->
+            <div class="bg-surface-50 rounded-lg p-8">
+                <h3 class="font-crimson text-2xl font-semibold text-text-primary mb-8 text-center">Islamic Integration Across Subjects</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Mathematics -->
+                    <div class="card text-center">
+                        <div class="bg-primary-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-crimson text-lg font-semibold text-text-primary mb-2">Mathematics</h4>
+                        <p class="text-text-secondary text-sm">Islamic geometric patterns, Zakat calculations, and mathematical concepts in Quran</p>
+                    </div>
+
+                    <!-- Science -->
+                    <div class="card text-center">
+                        <div class="bg-secondary-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-crimson text-lg font-semibold text-text-primary mb-2">Science</h4>
+                        <p class="text-text-secondary text-sm">Exploring Allah's creation, scientific miracles in Quran, and environmental stewardship</p>
+                    </div>
+
+                    <!-- History -->
+                    <div class="card text-center">
+                        <div class="bg-accent-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 2L3 9l7 7 7-7-7-7zM10 4.83L15.17 10 10 15.17 4.83 10 10 4.83z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-crimson text-lg font-semibold text-text-primary mb-2">History</h4>
+                        <p class="text-text-secondary text-sm">Islamic civilization, prophetic biography, and contributions of Muslim scholars</p>
+                    </div>
+
+                    <!-- Language Arts -->
+                    <div class="card text-center">
+                        <div class="bg-success-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-success-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-crimson text-lg font-semibold text-text-primary mb-2">Language Arts</h4>
+                        <p class="text-text-secondary text-sm">Islamic literature, Arabic language integration, and moral storytelling</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Tour Section -->
+    <section id="campus-section" class="section-content py-16 bg-surface-50 hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-4">Virtual Campus Tour</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Explore our thoughtfully designed Islamic learning environment with dedicated spaces for worship, learning, and community building</p>
+            </div>
+
+            <!-- Campus Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Prayer Hall -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800" alt="School prayer hall with Islamic architecture" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-3">Prayer Hall (Musalla)</h3>
+                    <p class="text-text-secondary mb-4">Beautiful prayer space accommodating 200+ students and staff, with separate areas for boys and girls, featuring traditional Islamic architecture and Qibla direction clearly marked.</p>
+                    <div class="flex items-center text-primary text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2L3 9l7 7 7-7-7-7zM10 4.83L15.17 10 10 15.17 4.83 10 10 4.83z"/>
+                        </svg>
+                        Daily prayers & Friday Jummah
+                    </div>
+                </div>
+
+                <!-- Islamic Library -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Islamic library with Arabic and English books" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-3">Islamic Library</h3>
+                    <p class="text-text-secondary mb-4">Extensive collection of Islamic literature, Quranic commentaries, and age-appropriate Islamic books in both Arabic and English, creating a rich learning environment.</p>
+                    <div class="flex items-center text-primary text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                        5,000+ Islamic books & resources
+                    </div>
+                </div>
+
+                <!-- Classrooms -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 rounded-lg overflow-hidden">
+                        <img src="https://images.pixabay.com/photos/2016/03/23/04/01/woman-1274056_1280.jpg" alt="Modern Islamic classroom with technology" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-3">Modern Classrooms</h3>
+                    <p class="text-text-secondary mb-4">Technology-equipped learning spaces designed with Islamic aesthetics, featuring smart boards, comfortable seating, and natural lighting to enhance the learning experience.</p>
+                    <div class="flex items-center text-primary text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                        12 fully equipped classrooms
+                    </div>
+                </div>
+
+                <!-- Outdoor Reflection Garden -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 rounded-lg overflow-hidden">
+                        <img src="https://images.pixabay.com/photos/2021/08/25/20/42/field-6574455_1280.jpg" alt="Peaceful outdoor reflection garden" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-3">Reflection Garden</h3>
+                    <p class="text-text-secondary mb-4">Peaceful outdoor space designed for contemplation and connection with nature, featuring Islamic garden elements and quiet areas for individual reflection and small group discussions.</p>
+                    <div class="flex items-center text-primary text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                        </svg>
+                        Meditation & outdoor learning
+                    </div>
+                </div>
+
+                <!-- Multipurpose Hall -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Multipurpose hall for Islamic events" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-3">Multipurpose Hall</h3>
+                    <p class="text-text-secondary mb-4">Versatile space for Islamic celebrations, community gatherings, parent meetings, and student presentations, equipped with audio-visual systems and flexible seating arrangements.</p>
+                    <div class="flex items-center text-primary text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                        Community events & celebrations
+                    </div>
+                </div>
+
+                <!-- Science Lab -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Science laboratory with Islamic perspective" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-3">Science Laboratory</h3>
+                    <p class="text-text-secondary mb-4">Fully equipped science lab where students explore Allah's creation through hands-on experiments, fostering scientific inquiry within an Islamic worldview.</p>
+                    <div class="flex items-center text-primary text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        Hands-on Islamic science education
+                    </div>
+                </div>
+            </div>
+
+            <!-- Virtual Tour CTA -->
+            <div class="bg-white rounded-lg p-8 text-center shadow-gentle">
+                <h3 class="font-crimson text-2xl font-semibold text-text-primary mb-4">Experience Our Campus</h3>
+                <p class="text-text-secondary mb-6 max-w-2xl mx-auto">
+                    Schedule a personalized campus tour to see our Islamic learning environment firsthand and meet our dedicated educators.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="admissions_enrollment_journey.html" class="btn-primary">
+                        <svg class="inline-block w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        Schedule Campus Visit
+                    </a>
+                    <button class="btn-secondary">
+                        <svg class="inline-block w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                        Watch Virtual Tour
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values & Code of Conduct Section -->
+    <section id="values-section" class="section-content py-16 bg-white hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-4">Community Values & Code of Conduct</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Our shared commitment to Islamic values creates a nurturing environment where every member of our community can thrive</p>
+            </div>
+
+            <!-- Core Values -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="bg-primary-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-3">Compassion (Rahma)</h3>
+                    <p class="text-text-secondary">Following the prophetic example of kindness and mercy in all our interactions</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-secondary-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-3">Honesty (Sidq)</h3>
+                    <p class="text-text-secondary">Truthfulness in speech and action, building trust within our community</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-accent-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-3">Respect (Ihtiram)</h3>
+                    <p class="text-text-secondary">Honoring the dignity of every individual as part of Allah's creation</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-success-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-success-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-3">Excellence (Ihsan)</h3>
+                    <p class="text-text-secondary">Striving for the highest standards in worship, learning, and character</p>
+                </div>
+            </div>
+
+            <!-- Code of Conduct Sections -->
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Student Expectations -->
+                <div class="card">
+                    <h3 class="font-crimson text-xl font-semibold text-primary mb-4">Student Expectations</h3>
+                    <ul class="space-y-3 text-text-secondary">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Begin each day with Bismillah and maintain Islamic etiquette</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Show respect to teachers, peers, and all community members</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Participate actively in daily prayers and Islamic activities</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Maintain modest dress code in accordance with Islamic guidelines</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Strive for academic excellence while helping classmates succeed</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Family Partnership -->
+                <div class="card">
+                    <h3 class="font-crimson text-xl font-semibold text-primary mb-4">Family Partnership</h3>
+                    <ul class="space-y-3 text-text-secondary">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Support Islamic education goals at home and school</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Maintain open communication with teachers and administration</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Participate in school events and community activities</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Reinforce Islamic values and teachings at home</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Volunteer time and skills to benefit the school community</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Staff Commitment -->
+                <div class="card">
+                    <h3 class="font-crimson text-xl font-semibold text-primary mb-4">Staff Commitment</h3>
+                    <ul class="space-y-3 text-text-secondary">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Embody Islamic character and serve as positive role models</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Integrate Islamic values throughout all subject areas</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Provide individualized attention to each student's growth</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Maintain professional development in Islamic education</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Foster a safe, inclusive, and nurturing learning environment</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Trust Building Elements -->
+            <div class="mt-16 bg-surface-50 rounded-lg p-8">
+                <h3 class="font-crimson text-2xl font-semibold text-text-primary mb-8 text-center">Our Credentials & Recognition</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-primary-50 rounded-lg p-6 mb-4">
+                            <svg class="w-12 h-12 text-primary mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <h4 class="font-semibold text-text-primary">Islamic Education Accreditation</h4>
+                        </div>
+                        <p class="text-text-secondary text-sm">Certified by the Islamic Schools League of America (ISLA)</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="bg-secondary-50 rounded-lg p-6 mb-4">
+                            <svg class="w-12 h-12 text-secondary-600 mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                            </svg>
+                            <h4 class="font-semibold text-text-primary">Community Partnerships</h4>
+                        </div>
+                        <p class="text-text-secondary text-sm">Collaborations with 15+ local mosques and Islamic organizations</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="bg-accent-50 rounded-lg p-6 mb-4">
+                            <svg class="w-12 h-12 text-accent mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                            <h4 class="font-semibold text-text-primary">Scholar Endorsements</h4>
+                        </div>
+                        <p class="text-text-secondary text-sm">Recommended by respected Islamic scholars and educators</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-primary to-primary-700">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-crimson font-semibold text-white mb-6">
+                Join Our Islamic Educational Community
+            </h2>
+            <p class="text-xl text-primary-100 mb-8 leading-relaxed">
+                Discover how Darsgah Kids can nurture your child's Islamic character while achieving academic excellence. Schedule a visit to experience our unique approach firsthand.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="admissions_enrollment_journey.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
+                    Begin Admissions Process
+                </a>
+                <a href="homepage_islamic_educational_institution.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors">
+                    Return to Homepage
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- School Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-10 w-10 text-primary" viewBox="0 0 48 48" fill="currentColor">
+                            <path d="M24 4L6 14v20c0 11.05 7.64 21.36 18 24 10.36-2.64 18-12.95 18-24V14L24 4zm0 6.83L36 16v18c0 8.27-5.69 15.54-12 17.84C17.69 49.54 12 42.27 12 34V16l12-5.17z"/>
+                            <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 24l3 3 6-6" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                        <div class="ml-3">
+                            <h3 class="text-xl font-crimson font-semibold">Darsgah Kids</h3>
+                            <p class="text-text-light text-sm">Islamic Educational Excellence</p>
+                        </div>
+                    </div>
+                    <p class="text-text-light leading-relaxed mb-4">
+                        Nurturing Islamic character while achieving academic excellence. Where Quranic wisdom meets modern learning to build confident Muslim leaders for tomorrow.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-text-light hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-light hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-light hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z.017 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-crimson text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about_us_our_islamic_mission.html" class="text-text-light hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="academic_programs_islamic_curriculum_showcase.html" class="text-text-light hover:text-primary transition-colors">Academic Programs</a></li>
+                        <li><a href="admissions_enrollment_journey.html" class="text-text-light hover:text-primary transition-colors">Admissions</a></li>
+                        <li><a href="student_life_islamic_community_experience.html" class="text-text-light hover:text-primary transition-colors">Student Life</a></li>
+                        <li><a href="parent_portal_family_engagement_hub.html" class="text-text-light hover:text-primary transition-colors">Parent Portal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-crimson text-lg font-semibold mb-4">Contact Us</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <div class="text-white">123 Islamic Education Blvd</div>
+                                <div class="text-text-light">Metro City, MC 12345</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <span class="text-text-light">(555) 123-KIDS</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <span class="text-text-light">info@darsgahkids.edu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-text-muted mt-8 pt-8 text-center">
+                <p class="text-text-light">© 2025 Darsgah Kids Islamic Educational Institution. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => section.classList.add('hidden'));
+            
+            // Show selected section
+            document.getElementById(sectionName + '-section').classList.remove('hidden');
+            
+            // Update tab styles
+            const tabs = document.querySelectorAll('.tab-button');
+            tabs.forEach(tab => {
+                tab.classList.remove('active', 'border-primary', 'text-primary');
+                tab.classList.add('border-transparent', 'text-text-secondary');
+            });
+            
+            // Activate selected tab
+            const activeTab = document.getElementById(sectionName + '-tab');
+            activeTab.classList.add('active', 'border-primary', 'text-primary');
+            activeTab.classList.remove('border-transparent', 'text-text-secondary');
+        }
+
+        // Auto-hide mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = event.target.closest('button');
+            
+            if (!menu.contains(event.target) && !button) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Initialize first section as visible
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('story');
+        });
+    </script>
+</body>
+</html>

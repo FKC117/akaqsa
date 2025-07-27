@@ -1,0 +1,88 @@
+{% extends 'website/base.html' %}
+
+{% block title %}Parent Portal - Al Aqsa School{% endblock %}
+
+{% block content %}
+<section class="relative bg-gradient-to-br from-primary-50 to-surface-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl lg:text-5xl font-crimson font-bold text-text-primary mb-6">
+                Parent Portal
+            </h1>
+            <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                Stay connected with your child's education and school activities
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-crimson font-bold text-text-primary mb-4">
+                Parent Resources
+            </h2>
+            <p class="text-lg text-text-secondary">
+                Access important information and stay involved in your child's educational journey
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Academic Progress -->
+            <div class="bg-white rounded-lg shadow-gentle p-6 hover:shadow-elevated transition-shadow">
+                <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">Academic Progress</h3>
+                <p class="text-text-secondary">
+                    Monitor your child's academic performance, grades, and attendance records.
+                </p>
+            </div>
+
+            <!-- School Calendar -->
+            <div class="bg-white rounded-lg shadow-gentle p-6 hover:shadow-elevated transition-shadow">
+                <div class="w-16 h-16 bg-success-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-success-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">School Calendar</h3>
+                <p class="text-text-secondary">
+                    Stay updated with important dates, events, and school activities.
+                </p>
+            </div>
+
+            <!-- Communication -->
+            <div class="bg-white rounded-lg shadow-gentle p-6 hover:shadow-elevated transition-shadow">
+                <div class="w-16 h-16 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">Communication</h3>
+                <p class="text-text-secondary">
+                    Direct communication with teachers and school administration.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-gradient-to-r from-primary to-primary-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-crimson font-bold mb-4">
+            Access Parent Portal
+        </h2>
+        <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Login to access your child's information and stay connected with our school community.
+        </p>
+        <a href="{% url 'login' %}" class="bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="fas fa-sign-in-alt mr-2"></i>
+            Login to Portal
+        </a>
+    </div>
+</section>
+{% endblock %} 

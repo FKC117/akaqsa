@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admissions - Enrollment Journey | Darsgah Kids - Islamic Educational Excellence</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdarsgahki7956back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background font-inter">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-islamic sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-12 w-12 text-primary" viewBox="0 0 48 48" fill="currentColor">
+                            <path d="M24 4L6 14v20c0 11.05 7.64 21.36 18 24 10.36-2.64 18-12.95 18-24V14L24 4zm0 6.83L36 16v18c0 8.27-5.69 15.54-12 17.84C17.69 49.54 12 42.27 12 34V16l12-5.17z"/>
+                            <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 24l3 3 6-6" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-2xl font-crimson font-semibold text-primary">Darsgah Kids</h1>
+                        <p class="text-sm text-text-secondary">Islamic Educational Excellence</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage_islamic_educational_institution.html" class="text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm">Home</a>
+                        <a href="about_us_our_islamic_mission.html" class="text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm">About Us</a>
+                        <a href="academic_programs_islamic_curriculum_showcase.html" class="text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm">Programs</a>
+                        <a href="student_life_islamic_community_experience.html" class="text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm">Student Life</a>
+                        <a href="admissions_enrollment_journey.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Admissions</a>
+                        <a href="parent_portal_family_engagement_hub.html" class="btn-primary text-sm">Parent Portal</a>
+                    </div>
+                </div>
+
+                <!-- Prayer Time Widget -->
+                <div class="hidden lg:flex items-center bg-surface-100 rounded-lg px-4 py-2">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2L3 9l7 7 7-7-7-7zM10 4.83L15.17 10 10 15.17 4.83 10 10 4.83z"/>
+                    </svg>
+                    <div class="text-sm">
+                        <div class="font-semibold text-primary">Next: Asr</div>
+                        <div class="text-text-secondary">3:45 PM</div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary p-2" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-border-light">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage_islamic_educational_institution.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Home</a>
+                <a href="about_us_our_islamic_mission.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">About Us</a>
+                <a href="academic_programs_islamic_curriculum_showcase.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Programs</a>
+                <a href="student_life_islamic_community_experience.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Student Life</a>
+                <a href="admissions_enrollment_journey.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Admissions</a>
+                <a href="parent_portal_family_engagement_hub.html" class="btn-primary block text-center mx-3 mt-4">Parent Portal</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-surface-100 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="currentColor">
+                <defs>
+                    <pattern id="islamic-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <polygon points="10,1 4,7 10,13 16,7" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#islamic-pattern)"/>
+            </svg>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8">
+                    <!-- Quranic Verse -->
+                    <div class="bg-white/80 backdrop-blur-sm rounded-lg p-6 border border-primary-100">
+                        <div class="text-center">
+                            <p class="font-amiri text-xl text-primary mb-2" dir="rtl">وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا</p>
+                            <p class="text-text-secondary text-sm italic">"And whoever fears Allah - He will make for him a way out" - Quran 65:2</p>
+                            <p class="text-xs text-text-muted mt-2">Guidance for New Beginnings</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h1 class="text-4xl lg:text-5xl font-crimson font-semibold text-text-primary leading-tight mb-6">
+                            Begin Your Child's <span class="text-gradient-primary">Islamic Educational Journey</span>
+                        </h1>
+                        <p class="text-xl text-text-secondary leading-relaxed mb-8">
+                            Welcome to a thoughtful enrollment process that honors both your family's practical needs and Islamic values. We're here to guide you every step of the way toward nurturing your child's Islamic identity and academic potential.
+                        </p>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="scrollToApplication()" class="btn-primary text-center">
+                            <svg class="inline-block w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Start Application
+                        </button>
+                        <button onclick="scheduleVisit()" class="btn-secondary text-center">
+                            <svg class="inline-block w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            Schedule Campus Visit
+                        </button>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="bg-white rounded-lg p-6 shadow-gentle border border-border-light">
+                        <h3 class="font-crimson text-lg font-semibold text-primary mb-4">Admissions Office</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                                <span class="text-text-secondary">(555) 123-KIDS ext. 101</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                </svg>
+                                <span class="text-text-secondary">admissions@darsgahkids.edu</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-secondary">Office Hours: Mon-Fri 8:00 AM - 4:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative">
+                    <div class="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-elevated">
+                        <img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Welcoming Islamic school environment with diverse families" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    <!-- Floating Stats -->
+                    <div class="absolute -bottom-6 -right-6 bg-white rounded-lg p-4 shadow-lg border border-border-light">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-primary">98%</div>
+                            <div class="text-sm text-text-secondary">Family Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Process Steps -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-4">Your Enrollment Journey</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">A thoughtful step-by-step process designed to ensure the best fit for your child and family</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center group">
+                    <div class="bg-primary-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
+                        <div class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold">1</div>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-4">Initial Inquiry</h3>
+                    <p class="text-text-secondary leading-relaxed mb-4">Connect with our admissions team to discuss your family's Islamic educational goals and learn about our programs.</p>
+                    <button onclick="openInquiryForm()" class="text-primary font-semibold hover:text-primary-700 transition-colors">
+                        Start Inquiry →
+                    </button>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center group">
+                    <div class="bg-secondary-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary-100 transition-colors">
+                        <div class="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold">2</div>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-4">Campus Visit</h3>
+                    <p class="text-text-secondary leading-relaxed mb-4">Experience our Islamic learning environment during regular school hours or special Islamic events.</p>
+                    <button onclick="scheduleVisit()" class="text-primary font-semibold hover:text-primary-700 transition-colors">
+                        Schedule Visit →
+                    </button>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center group">
+                    <div class="bg-accent-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-100 transition-colors">
+                        <div class="bg-accent text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold">3</div>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-4">Family Interview</h3>
+                    <p class="text-text-secondary leading-relaxed mb-4">Meet with our educators to discuss your child's needs and ensure alignment with our Islamic values.</p>
+                    <button onclick="learnMoreInterview()" class="text-primary font-semibold hover:text-primary-700 transition-colors">
+                        Learn More →
+                    </button>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center group">
+                    <div class="bg-success-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-success-100 transition-colors">
+                        <div class="bg-success-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold">4</div>
+                    </div>
+                    <h3 class="font-crimson text-xl font-semibold text-text-primary mb-4">Enrollment</h3>
+                    <p class="text-text-secondary leading-relaxed mb-4">Complete your application and join our Islamic educational community with new family orientation.</p>
+                    <button onclick="scrollToApplication()" class="text-primary font-semibold hover:text-primary-700 transition-colors">
+                        Apply Now →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Requirements -->
+    <section id="application-section" class="py-16 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Requirements -->
+                <div>
+                    <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-6">Application Requirements</h2>
+                    <div class="space-y-6">
+                        <!-- Required Documents -->
+                        <div class="card">
+                            <h3 class="font-crimson text-xl font-semibold text-primary mb-4 flex items-center">
+                                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                                Required Documents
+                            </h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-success-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-text-secondary">Completed application form with Islamic educational goals</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-success-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-text-secondary">Birth certificate and immunization records</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-success-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-text-secondary">Previous school transcripts (if applicable)</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-success-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-text-secondary">Two character references from Muslim community members</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-success-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-text-secondary">Family commitment to Islamic values statement</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Grade Level Prerequisites -->
+                        <div class="card">
+                            <h3 class="font-crimson text-xl font-semibold text-primary mb-4 flex items-center">
+                                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                                Grade Level Prerequisites
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-primary pl-4">
+                                    <h4 class="font-semibold text-text-primary">Kindergarten - Grade 2</h4>
+                                    <p class="text-text-secondary text-sm">Basic Islamic etiquette and simple duas preferred but not required</p>
+                                </div>
+                                <div class="border-l-4 border-secondary pl-4">
+                                    <h4 class="font-semibold text-text-primary">Grade 3 - Grade 5</h4>
+                                    <p class="text-text-secondary text-sm">Familiarity with Arabic alphabet and basic Quranic recitation</p>
+                                </div>
+                                <div class="border-l-4 border-accent pl-4">
+                                    <h4 class="font-semibold text-text-primary">Grade 6+</h4>
+                                    <p class="text-text-secondary text-sm">Assessment of Islamic studies knowledge and Arabic reading ability</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Form Preview -->
+                <div>
+                    <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-6">Online Application</h2>
+                    <div class="card">
+                        <form class="space-y-6">
+                            <!-- Student Information -->
+                            <div>
+                                <h3 class="font-crimson text-lg font-semibold text-primary mb-4">Student Information</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-2">Student's Full Name *</label>
+                                        <input type="text" class="input-field" placeholder="Enter full name" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-2">Date of Birth *</label>
+                                        <input type="date" class="input-field" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-2">Grade Applying For *</label>
+                                        <select class="input-field">
+                                            <option>Select Grade</option>
+                                            <option>Kindergarten</option>
+                                            <option>Grade 1</option>
+                                            <option>Grade 2</option>
+                                            <option>Grade 3</option>
+                                            <option>Grade 4</option>
+                                            <option>Grade 5</option>
+                                            <option>Grade 6</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-2">Preferred Start Date *</label>
+                                        <select class="input-field">
+                                            <option>Fall 2025</option>
+                                            <option>Spring 2026</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Parent Information -->
+                            <div>
+                                <h3 class="font-crimson text-lg font-semibold text-primary mb-4">Parent/Guardian Information</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-2">Parent/Guardian Name *</label>
+                                        <input type="text" class="input-field" placeholder="Enter full name" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-2">Email Address *</label>
+                                        <input type="email" class="input-field" placeholder="your.email@example.com" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-2">Phone Number *</label>
+                                        <input type="tel" class="input-field" placeholder="(555) 123-4567" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-2">Relationship to Student *</label>
+                                        <select class="input-field">
+                                            <option>Select Relationship</option>
+                                            <option>Mother</option>
+                                            <option>Father</option>
+                                            <option>Guardian</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Islamic Educational Goals -->
+                            <div>
+                                <h3 class="font-crimson text-lg font-semibold text-primary mb-4">Islamic Educational Goals</h3>
+                                <div class="space-y-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-2">What are your primary goals for your child's Islamic education? *</label>
+                                        <textarea class="input-field h-24" placeholder="Please share your hopes and expectations for your child's spiritual and academic growth..."></textarea>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-2">Current Islamic Knowledge Level</label>
+                                        <select class="input-field">
+                                            <option>Select Level</option>
+                                            <option>Beginner - Learning basic Islamic concepts</option>
+                                            <option>Intermediate - Knows basic prayers and Quranic verses</option>
+                                            <option>Advanced - Regular Quran reading and Islamic practice</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="pt-6 border-t border-border-light">
+                                <button type="submit" class="btn-primary w-full">
+                                    Submit Application
+                                </button>
+                                <p class="text-sm text-text-muted mt-3 text-center">
+                                    By submitting this application, you agree to our enrollment policies and Islamic educational philosophy.
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tuition and Financial Aid -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-4">Tuition & Financial Assistance</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Transparent pricing with Zakat-based financial aid to make Islamic education accessible to all families</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Tuition Structure -->
+                <div class="lg:col-span-2">
+                    <div class="card">
+                        <h3 class="font-crimson text-xl font-semibold text-primary mb-6">2025-2026 Tuition Structure</h3>
+                        <div class="space-y-4">
+                            <!-- Kindergarten -->
+                            <div class="flex justify-between items-center p-4 bg-surface-50 rounded-lg">
+                                <div>
+                                    <h4 class="font-semibold text-text-primary">Kindergarten (Half Day)</h4>
+                                    <p class="text-sm text-text-secondary">8:00 AM - 12:00 PM</p>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-xl font-bold text-primary">$4,800</div>
+                                    <div class="text-sm text-text-muted">per year</div>
+                                </div>
+                            </div>
+
+                            <!-- Elementary -->
+                            <div class="flex justify-between items-center p-4 bg-surface-50 rounded-lg">
+                                <div>
+                                    <h4 class="font-semibold text-text-primary">Elementary (Grades 1-5)</h4>
+                                    <p class="text-sm text-text-secondary">8:00 AM - 3:00 PM</p>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-xl font-bold text-primary">$6,200</div>
+                                    <div class="text-sm text-text-muted">per year</div>
+                                </div>
+                            </div>
+
+                            <!-- Middle School -->
+                            <div class="flex justify-between items-center p-4 bg-surface-50 rounded-lg">
+                                <div>
+                                    <h4 class="font-semibold text-text-primary">Middle School (Grade 6+)</h4>
+                                    <p class="text-sm text-text-secondary">8:00 AM - 3:30 PM</p>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-xl font-bold text-primary">$7,500</div>
+                                    <div class="text-sm text-text-muted">per year</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Fees -->
+                        <div class="mt-6 pt-6 border-t border-border-light">
+                            <h4 class="font-semibold text-text-primary mb-4">Additional Fees</h4>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Registration Fee (one-time)</span>
+                                    <span class="font-semibold">$150</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Technology Fee (annual)</span>
+                                    <span class="font-semibold">$200</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Islamic Materials Fee</span>
+                                    <span class="font-semibold">$100</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Field Trip Fund</span>
+                                    <span class="font-semibold">$75</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Aid -->
+                <div>
+                    <div class="card">
+                        <h3 class="font-crimson text-xl font-semibold text-primary mb-4 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                            </svg>
+                            Zakat-Based Financial Aid
+                        </h3>
+                        <p class="text-text-secondary mb-4">We believe Islamic education should be accessible to all Muslim families, regardless of financial circumstances.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-primary-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Up to 75% Tuition Assistance</h4>
+                                <p class="text-sm text-text-secondary">Based on family need and available Zakat funds</p>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-success-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm text-text-secondary">Confidential application process</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-success-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm text-text-secondary">Flexible payment plans available</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-success-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm text-text-secondary">Work-study opportunities for families</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="openFinancialAidForm()" class="btn-secondary w-full mt-6">
+                            Apply for Financial Aid
+                        </button>
+                    </div>
+
+                    <!-- Payment Options -->
+                    <div class="card mt-6">
+                        <h3 class="font-crimson text-lg font-semibold text-primary mb-4">Payment Options</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-secondary">Annual payment (5% discount)</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-secondary">Semester payments (2 installments)</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-secondary">Monthly payments (10 months)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Testimonials -->
+    <section class="py-16 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-4">New Family Experiences</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Hear from families who recently joined our Islamic educational community</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Khalid Rahman - New Parent" class="w-16 h-16 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Khalid Rahman</h4>
+                            <p class="text-text-secondary text-sm">Parent of Amina (Grade 2)</p>
+                            <div class="flex text-secondary-500 mt-1">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote class="text-text-secondary italic leading-relaxed mb-4">
+                        "The admissions process at Darsgah Kids was so welcoming and thorough. They took time to understand our family's Islamic educational goals and made sure we felt comfortable every step of the way. The financial aid process was handled with complete discretion and respect. Amina has thrived here from day one."
+                    </blockquote>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-text-muted">Enrolled Fall 2024</span>
+                        <div class="bg-success-50 text-success-600 px-3 py-1 rounded-full text-xs font-semibold">
+                            New Family
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="card">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <img src="https://images.pixabay.com/photos/2016/11/21/14/53/woman-1845517_1280.jpg" alt="Maryam Hassan - New Parent" class="w-16 h-16 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Maryam Hassan</h4>
+                            <p class="text-text-secondary text-sm">Parent of Omar (Kindergarten)</p>
+                            <div class="flex text-secondary-500 mt-1">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote class="text-text-secondary italic leading-relaxed mb-4">
+                        "As a single mother, I was worried about affording Islamic education for Omar. The Zakat-based financial aid program made it possible for us to join this amazing community. The new family orientation helped us feel welcomed and prepared. Omar loves his teachers and has made wonderful friends."
+                    </blockquote>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-text-muted">Enrolled Spring 2025</span>
+                        <div class="bg-primary-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">
+                            Financial Aid Recipient
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-text-secondary">Common questions from prospective families about our Islamic educational approach</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="card">
+                    <button class="w-full text-left" onclick="toggleFAQ('faq1')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-crimson text-lg font-semibold text-text-primary">How do you integrate Islamic values with state educational standards?</h3>
+                            <svg id="faq1-icon" class="w-6 h-6 text-primary transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="faq1-content" class="hidden mt-4 pt-4 border-t border-border-light">
+                        <p class="text-text-secondary leading-relaxed">Our curriculum seamlessly weaves Islamic principles throughout all subjects while meeting and exceeding state standards. For example, in mathematics, we explore Islamic geometric patterns and the mathematical concepts in Quranic verses. In science, we study Allah's creation with wonder and gratitude. Our students consistently perform above grade level on standardized assessments while developing strong Islamic character.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="card">
+                    <button class="w-full text-left" onclick="toggleFAQ('faq2')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-crimson text-lg font-semibold text-text-primary">What if my child has no prior Islamic education background?</h3>
+                            <svg id="faq2-icon" class="w-6 h-6 text-primary transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="faq2-content" class="hidden mt-4 pt-4 border-t border-border-light">
+                        <p class="text-text-secondary leading-relaxed">We welcome children at all levels of Islamic knowledge! Our teachers are skilled at meeting each child where they are and providing appropriate support. We offer differentiated Islamic studies instruction and additional support for students new to Arabic or Quranic studies. Many of our most successful students started with little to no Islamic educational background.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="card">
+                    <button class="w-full text-left" onclick="toggleFAQ('faq3')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-crimson text-lg font-semibold text-text-primary">How do you prepare students for high school transitions?</h3>
+                            <svg id="faq3-icon" class="w-6 h-6 text-primary transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="faq3-content" class="hidden mt-4 pt-4 border-t border-border-light">
+                        <p class="text-text-secondary leading-relaxed">Our graduates are well-prepared for both Islamic high schools and secular institutions. We provide rigorous academic preparation, critical thinking skills, and strong Islamic identity formation. Our alumni regularly receive acceptance to top high schools and maintain their Islamic values throughout their educational journey. We also offer transition counseling and ongoing support for graduates.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="card">
+                    <button class="w-full text-left" onclick="toggleFAQ('faq4')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-crimson text-lg font-semibold text-text-primary">What is your approach to discipline and behavior management?</h3>
+                            <svg id="faq4-icon" class="w-6 h-6 text-primary transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="faq4-content" class="hidden mt-4 pt-4 border-t border-border-light">
+                        <p class="text-text-secondary leading-relaxed">We use positive, Islamic-based behavior management rooted in prophetic teachings about kindness, patience, and wisdom. Our approach emphasizes natural consequences, restorative justice, and character development rather than punitive measures. We work closely with families to ensure consistency between home and school expectations, always treating each child with dignity and respect.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="card">
+                    <button class="w-full text-left" onclick="toggleFAQ('faq5')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-crimson text-lg font-semibold text-text-primary">How much parent involvement is expected?</h3>
+                            <svg id="faq5-icon" class="w-6 h-6 text-primary transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="faq5-content" class="hidden mt-4 pt-4 border-t border-border-light">
+                        <p class="text-text-secondary leading-relaxed">We believe parents are their child's first teachers and value strong home-school partnerships. While we don't require specific volunteer hours, we offer many opportunities for involvement including classroom assistance, Islamic event planning, fundraising, and educational workshops. We understand that families have different capacities for involvement and work with each family's unique circumstances.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Information Sessions -->
+    <section class="py-16 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-crimson font-semibold text-text-primary mb-4">Virtual Information Sessions</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Join us online to learn about our Islamic educational approach from the comfort of your home</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Upcoming Sessions -->
+                <div class="card">
+                    <h3 class="font-crimson text-xl font-semibold text-primary mb-6">Upcoming Sessions</h3>
+                    <div class="space-y-4">
+                        <!-- Session 1 -->
+                        <div class="flex items-start space-x-4 p-4 bg-primary-50 rounded-lg">
+                            <div class="bg-primary text-white rounded-lg p-3 flex-shrink-0">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold">15</div>
+                                    <div class="text-xs">FEB</div>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-text-primary">General Information Session</h4>
+                                <p class="text-text-secondary text-sm mb-2">Overview of our Islamic curriculum and educational philosophy</p>
+                                <div class="flex items-center space-x-4 text-sm text-text-muted">
+                                    <span>7:00 PM - 8:30 PM</span>
+                                    <span>•</span>
+                                    <span>Zoom Meeting</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary text-sm">Register</button>
+                        </div>
+
+                        <!-- Session 2 -->
+                        <div class="flex items-start space-x-4 p-4 bg-secondary-50 rounded-lg">
+                            <div class="bg-secondary text-white rounded-lg p-3 flex-shrink-0">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold">22</div>
+                                    <div class="text-xs">FEB</div>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-text-primary">Financial Aid Workshop</h4>
+                                <p class="text-text-secondary text-sm mb-2">Understanding our Zakat-based assistance program</p>
+                                <div class="flex items-center space-x-4 text-sm text-text-muted">
+                                    <span>2:00 PM - 3:00 PM</span>
+                                    <span>•</span>
+                                    <span>Zoom Meeting</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary text-sm">Register</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What to Expect -->
+                <div class="card">
+                    <h3 class="font-crimson text-xl font-semibold text-primary mb-6">What to Expect</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Virtual Campus Tour</h4>
+                                <p class="text-text-secondary text-sm">See our classrooms, prayer space, and learning environments</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Meet Our Educators</h4>
+                                <p class="text-text-secondary text-sm">Hear from our qualified Islamic teachers and administrators</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Q&A Session</h4>
+                                <p class="text-text-secondary text-sm">Ask questions about curriculum, admissions, and school life</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Resource Downloads</h4>
+                                <p class="text-text-secondary text-sm">Access curriculum guides and application materials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-primary to-primary-700">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-crimson font-semibold text-white mb-6">
+                Ready to Start Your Application?
+            </h2>
+            <p class="text-xl text-primary-100 mb-8 leading-relaxed">
+                Take the first step toward providing your child with an authentic Islamic education that nurtures both spiritual growth and academic excellence.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToApplication()" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
+                    Complete Application
+                </button>
+                <button onclick="scheduleVisit()" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors">
+                    Schedule Campus Visit
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- School Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-10 w-10 text-primary" viewBox="0 0 48 48" fill="currentColor">
+                            <path d="M24 4L6 14v20c0 11.05 7.64 21.36 18 24 10.36-2.64 18-12.95 18-24V14L24 4zm0 6.83L36 16v18c0 8.27-5.69 15.54-12 17.84C17.69 49.54 12 42.27 12 34V16l12-5.17z"/>
+                            <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 24l3 3 6-6" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                        <div class="ml-3">
+                            <h3 class="text-xl font-crimson font-semibold">Darsgah Kids</h3>
+                            <p class="text-text-light text-sm">Islamic Educational Excellence</p>
+                        </div>
+                    </div>
+                    <p class="text-text-light leading-relaxed mb-4">
+                        Nurturing Islamic character while achieving academic excellence. Where Quranic wisdom meets modern learning to build confident Muslim leaders for tomorrow.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-text-light hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-light hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-light hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z.017 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-crimson text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about_us_our_islamic_mission.html" class="text-text-light hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="academic_programs_islamic_curriculum_showcase.html" class="text-text-light hover:text-primary transition-colors">Academic Programs</a></li>
+                        <li><a href="admissions_enrollment_journey.html" class="text-text-light hover:text-primary transition-colors">Admissions</a></li>
+                        <li><a href="student_life_islamic_community_experience.html" class="text-text-light hover:text-primary transition-colors">Student Life</a></li>
+                        <li><a href="parent_portal_family_engagement_hub.html" class="text-text-light hover:text-primary transition-colors">Parent Portal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-crimson text-lg font-semibold mb-4">Contact Us</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <div class="text-white">123 Islamic Education Blvd</div>
+                                <div class="text-text-light">Metro City, MC 12345</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <span class="text-text-light">(555) 123-KIDS</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <span class="text-text-light">info@darsgahkids.edu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-text-muted mt-8 pt-8 text-center">
+                <p class="text-text-light">© 2025 Darsgah Kids Islamic Educational Institution. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function scrollToApplication() {
+            document.getElementById('application-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function scheduleVisit() {
+            alert('Campus visit scheduling system would open here. Please call (555) 123-KIDS ext. 101 to schedule your visit.');
+        }
+
+        function openInquiryForm() {
+            alert('Initial inquiry form would open here. Please email admissions@darsgahkids.edu or call (555) 123-KIDS ext. 101.');
+        }
+
+        function learnMoreInterview() {
+            alert('Family interview information would be displayed here. Our admissions team will contact you to schedule after your campus visit.');
+        }
+
+        function openFinancialAidForm() {
+            alert('Financial aid application would open here. All applications are handled with complete confidentiality.');
+        }
+
+        function toggleFAQ(faqId) {
+            const content = document.getElementById(faqId + '-content');
+            const icon = document.getElementById(faqId + '-icon');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Auto-hide mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = event.target.closest('button');
+            
+            if (!menu.contains(event.target) && !button) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! Our admissions team will contact you within 2 business days to discuss next steps.');
+        });
+    </script>
+</body>
+</html>

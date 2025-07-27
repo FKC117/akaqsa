@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Bulk Attendance - {{ class_name }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Page Header -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Bulk Attendance - {{ class_name }}</h1>
+        <div>
+            <a href="{% url 'student:bulk_attendance' %}" class="btn btn-secondary btn-sm">
+                <i class="fas fa-arrow-left"></i> Back to Form
+            </a>
+            <a href="{% url 'student:attendance_list' %}" class="btn btn-info btn-sm">
+                <i class="fas fa-list"></i> View All Attendance
+            </a>
+        </div>
+    </div>
+
+    <!-- Attendance Summary -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Date
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                {{ date|date:"M d, Y" }}
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Class
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                {{ class_name }}
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-graduation-cap fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Total Students
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                {{ students.count }}
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Status
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                Ready to Mark
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-check fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bulk Attendance Form -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Mark Attendance for {{ students.count }} Students</h6>
+                </div>
+                <div class="card-body">
+                    <form method="post" id="bulkAttendanceForm">
+                        {% csrf_token %}
+                        <input type="hidden" name="date" value="{{ date|date:'Y-m-d' }}">
+                        <input type="hidden" name="class_name" value="{{ class_name.id }}">
+                        
+                        <!-- Quick Actions -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-success" id="markAllPresent">
+                                        <i class="fas fa-check-double"></i> Mark All Present
+                                    </button>
+                                    <button type="button" class="btn btn-danger" id="markAllAbsent">
+                                        <i class="fas fa-times"></i> Mark All Absent
+                                    </button>
+                                    <button type="button" class="btn btn-warning" id="toggleAll">
+                                        <i class="fas fa-exchange-alt"></i> Toggle All
+                                    </button>
+                                    <button type="button" class="btn btn-info" id="clearReasons">
+                                        <i class="fas fa-eraser"></i> Clear Reasons
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Students Table -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th width="5%">#</th>
+                                        <th width="15%">Student ID</th>
+                                        <th width="25%">Student Name</th>
+                                        <th width="10%">Roll Number</th>
+                                        <th width="15%">Status</th>
+                                        <th width="30%">Reason (if absent)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for student in students %}
+                                    <tr>
+                                        <td>{{ forloop.counter }}</td>
+                                        <td>
+                                            <strong>{{ student.student_id }}</strong>
+                                        </td>
+                                        <td>{{ student.full_name }}</td>
+                                        <td>{{ student.roll_number }}</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input attendance-status" type="radio" 
+                                                       name="student_{{ student.id }}" id="present_{{ student.id }}" 
+                                                       value="present" checked>
+                                                <label class="form-check-label text-success" for="present_{{ student.id }}">
+                                                    <i class="fas fa-check"></i> Present
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input attendance-status" type="radio" 
+                                                       name="student_{{ student.id }}" id="absent_{{ student.id }}" 
+                                                       value="absent">
+                                                <label class="form-check-label text-danger" for="absent_{{ student.id }}">
+                                                    <i class="fas fa-times"></i> Absent
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-sm reason-field" 
+                                                   name="reason_{{ student.id }}" 
+                                                   placeholder="Reason for absence (optional)"
+                                                   disabled>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Summary -->
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <div class="alert alert-info">
+                                    <strong>Summary:</strong> 
+                                    <span id="presentCount">0</span> students marked as Present, 
+                                    <span id="absentCount">0</span> students marked as Absent
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Buttons -->
+                        <div class="form-group mt-3">
+                            <button type="submit" name="submit_attendance" class="btn btn-primary btn-lg">
+                                <i class="fas fa-save"></i> Save All Attendance
+                            </button>
+                            <a href="{% url 'student:bulk_attendance' %}" class="btn btn-secondary">
+                                <i class="fas fa-times"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    // Update summary counts
+    function updateSummary() {
+        var presentCount = $('input[value="present"]:checked').length;
+        var absentCount = $('input[value="absent"]:checked').length;
+        
+        $('#presentCount').text(presentCount);
+        $('#absentCount').text(absentCount);
+    }
+    
+    // Handle attendance status change
+    $('.attendance-status').change(function() {
+        var studentId = $(this).attr('name').replace('student_', '');
+        var isPresent = $(this).val() === 'present';
+        var reasonField = $('input[name="reason_' + studentId + '"]');
+        
+        if (isPresent) {
+            reasonField.prop('disabled', true).val('');
+        } else {
+            reasonField.prop('disabled', false);
+        }
+        
+        updateSummary();
+    });
+    
+    // Mark all present
+    $('#markAllPresent').click(function() {
+        $('input[value="present"]').prop('checked', true).trigger('change');
+    });
+    
+    // Mark all absent
+    $('#markAllAbsent').click(function() {
+        $('input[value="absent"]').prop('checked', true).trigger('change');
+    });
+    
+    // Toggle all
+    $('#toggleAll').click(function() {
+        $('.attendance-status').each(function() {
+            var currentValue = $(this).val();
+            var newValue = currentValue === 'present' ? 'absent' : 'present';
+            $('input[name="' + $(this).attr('name') + '"][value="' + newValue + '"]').prop('checked', true).trigger('change');
+        });
+    });
+    
+    // Clear all reasons
+    $('#clearReasons').click(function() {
+        $('.reason-field').val('');
+    });
+    
+    // Form validation
+    $('#bulkAttendanceForm').submit(function(e) {
+        var presentCount = $('input[value="present"]:checked').length;
+        var absentCount = $('input[value="absent"]:checked').length;
+        
+        if (presentCount + absentCount !== {{ students.count }}) {
+            alert('Please mark attendance for all students.');
+            e.preventDefault();
+            return false;
+        }
+        
+        // Check if absent students have reasons
+        var absentStudents = $('input[value="absent"]:checked');
+        var missingReasons = false;
+        
+        absentStudents.each(function() {
+            var studentId = $(this).attr('name').replace('student_', '');
+            var reason = $('input[name="reason_' + studentId + '"]').val().trim();
+            
+            if (!reason) {
+                missingReasons = true;
+                return false; // break the loop
+            }
+        });
+        
+        if (missingReasons) {
+            if (!confirm('Some absent students don\'t have reasons. Continue anyway?')) {
+                e.preventDefault();
+                return false;
+            }
+        }
+        
+        // Show loading
+        $(this).find('button[type="submit"]').html('<i class="fas fa-spinner fa-spin"></i> Saving...').prop('disabled', true);
+    });
+    
+    // Initialize summary
+    updateSummary();
+    
+    // Keyboard shortcuts
+    $(document).keydown(function(e) {
+        // Ctrl + P for mark all present
+        if (e.ctrlKey && e.keyCode === 80) {
+            e.preventDefault();
+            $('#markAllPresent').click();
+        }
+        // Ctrl + A for mark all absent
+        if (e.ctrlKey && e.keyCode === 65) {
+            e.preventDefault();
+            $('#markAllAbsent').click();
+        }
+        // Ctrl + T for toggle all
+        if (e.ctrlKey && e.keyCode === 84) {
+            e.preventDefault();
+            $('#toggleAll').click();
+        }
+    });
+});
+</script>
+{% endblock %} 
