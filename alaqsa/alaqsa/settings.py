@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'widget_tweaks',
-    'student',
     'website',
+    'student',
 ]
 
 MIDDLEWARE = [
@@ -186,7 +186,7 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True,
         },
-        'student': {
+        'staff': {
             'handlers': ['file', 'console'],
             'level': 'INFO',
             'propagate': True,
